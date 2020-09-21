@@ -1,0 +1,6 @@
+09/14/2020 10:42:01 => [Debug] Execution started for file: Main
+09/14/2020 10:42:02 => [Info] Color Dictionary execution started
+09/14/2020 10:42:09 => [Info] You selected the color Black.
+
+Definition: 'of the very darkest color owing to the absence of or complete absorption of light; the opposite of white.'
+09/14/2020 10:42:09 => [Info] Color Dictionary execution ended in: 00:00:07

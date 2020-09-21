@@ -1,0 +1,6 @@
+09/14/2020 10:41:23 => [Debug] Execution started for file: Main
+09/14/2020 10:41:24 => [Info] Color Dictionary execution started
+09/14/2020 10:41:30 => [Info] You selected the color Blue.
+
+Definition: 'of a color intermediate between green and violet, as of the sky or sea on a sunny day.'
+09/14/2020 10:41:30 => [Info] Color Dictionary execution ended in: 00:00:06

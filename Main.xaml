@@ -1,0 +1,319 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1146,997" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="22">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Globalization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap2010:Annotation.AnnotationText="Prompt user to type in the name of a color and display information about that color using a Message Box. User has three tries to input a match." DisplayName="Color Dictionary" sap:VirtualizedContainerService.HintSize="796,892" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="color" />
+      <Variable x:TypeArguments="x:Int32" Name="counter" />
+      <Variable x:TypeArguments="x:Int32" Name="random" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">350,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">380,77.5 380,124.5</av:PointCollection>
+        <x:Double x:Key="Width">762</x:Double>
+        <x:Double x:Key="Height">825</x:Double>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID0</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID0">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">280,124.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,93</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">380,217.5 380,257.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InputDialog Options="{x:Null}" sap2010:Annotation.AnnotationText="Prompt user to type in the name of a color." DisplayName="Input Dialog: Color" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Type the name of a color to learn more: " Title="Dictionary of Colors">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:String">[color]</OutArgument>
+        </ui:InputDialog.Result>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InputDialog>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">249,257.5</av:Point>
+              <av:Size x:Key="ShapeSize">262,91</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">380,348.5 380,446.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap2010:Annotation.AnnotationText="Convert user's input to Proper Case." DisplayName="Assign: Proper Case" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[color]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[CultureInfo.CurrentCulture.TextInfo.ToTitleCase(color.ToLower)]</InArgument>
+            </Assign.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Assign>
+          <FlowStep.Next>
+            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID1" DisplayName="Flow Switch" Expression="[color]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+              <FlowSwitch.Default>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">20,387</av:Point>
+                      <av:Size x:Key="ShapeSize">200,108</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">120,387 120,171 280,171</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence sap2010:Annotation.AnnotationText="If there is no match, ask again; limited to three tries." DisplayName="Color: No Match" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="TerminateWorkflowException" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap2010:Annotation.AnnotationText="Tally the number of times the user's input did not match." sap:VirtualizedContainerService.HintSize="521,102" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[counter + 1]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <If sap2010:Annotation.AnnotationText="If the counter equals 1, then prompt user to try again; 2 attempts remaining." Condition="[counter = 1]" DisplayName="If: Counter" sap:VirtualizedContainerService.HintSize="521,330" sap2010:WorkflowViewState.IdRef="If_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="No Match" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;No Match. 2 attempts remaining.&quot;]" />
+                        </Sequence>
+                      </If.Then>
+                    </If>
+                    <If sap2010:Annotation.AnnotationText="If the counter equals 2, then prompt user to try again; 1 attempt remaining." Condition="[counter = 2]" DisplayName="If: Counter" sap:VirtualizedContainerService.HintSize="521,330" sap2010:WorkflowViewState.IdRef="If_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="No Match" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[&quot;No Match. 1 attempt remaining.&quot;]" />
+                        </Sequence>
+                      </If.Then>
+                    </If>
+                    <If sap2010:Annotation.AnnotationText="If the counter equals 3, then prompt user they have reached their limit and Terminate the process." Condition="[counter = 3]" DisplayName="If: Counter" sap:VirtualizedContainerService.HintSize="521,403" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="376,213" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="No Match: Limit Reached" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;3 attempts made with no match. Dictionary will now close.&quot;]" />
+                          <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Limit of three tries has been reached." />
+                        </Sequence>
+                      </If.Then>
+                    </If>
+                  </Sequence>
+                  <FlowStep.Next>
+                    <x:Reference>__ReferenceID0</x:Reference>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowSwitch.Default>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">345,446.5</av:Point>
+                  <av:Size x:Key="ShapeSize">70,87</av:Size>
+                  <av:PointCollection x:Key="RedConnector">345,511.75 315,511.75 315,580 220,580</av:PointCollection>
+                  <av:PointCollection x:Key="Default">345,468.25 315,468.25 315,441 220,441</av:PointCollection>
+                  <av:PointCollection x:Key="BlackConnector">415,468.25 445,468.25 445,430 540,430</av:PointCollection>
+                  <av:PointCollection x:Key="WhiteConnector">415,511.75 445,511.75 445,580 540,580</av:PointCollection>
+                  <x:String x:Key="DefaultCaseDisplayName">No Match</x:String>
+                  <av:PointCollection x:Key="GreenConnector">362.5,533.5 362.5,730 220,730</av:PointCollection>
+                  <av:PointCollection x:Key="BlueConnector">397.5,533.5 397.5,730 540,730</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <FlowStep x:Key="Red" x:Name="__ReferenceID4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">20,518.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,123</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Tell the user that they selected the color 'Red' and provide the definition." DisplayName="Color: Red" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Color: Red" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_17" Text="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of a color at the end of the spectrum next to orange and opposite violet, as of blood, fire, or rubies.'&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message: Red" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of a color at the end of the spectrum next to orange and opposite violet, as of blood, fire, or rubies.'&quot;]" />
+                </Sequence>
+              </FlowStep>
+              <FlowStep x:Key="Green" x:Name="__ReferenceID5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">20,668.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,123</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Tell the user that they selected the color 'Green' and provide the definition." DisplayName="Color: Green" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Color: Green" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_18" Text="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of the color between blue and yellow in the spectrum; colored like grass or emeralds.'&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message: Green" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of the color between blue and yellow in the spectrum; colored like grass or emeralds.'&quot;]" />
+                </Sequence>
+              </FlowStep>
+              <FlowStep x:Key="Blue" x:Name="__ReferenceID6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">540,668.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,123</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Tell the user that they selected the color 'Blue' and provide the definition." DisplayName="Color: Blue" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Color: Blue" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of a color intermediate between green and violet, as of the sky or sea on a sunny day.'&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message: Blue" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of a color intermediate between green and violet, as of the sky or sea on a sunny day.'&quot;]" />
+                </Sequence>
+              </FlowStep>
+              <FlowStep x:Key="White" x:Name="__ReferenceID7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">540,518.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,123</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Tell the user that they selected the color 'White' and provide the definition." DisplayName="Color: White" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Color: White" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of the color of milk or fresh snow, due to the reflection of most wavelengths of visible light; the opposite of black.'&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message: White" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of the color of milk or fresh snow, due to the reflection of most wavelengths of visible light; the opposite of black.'&quot;]" />
+                </Sequence>
+              </FlowStep>
+              <FlowStep x:Key="Black" x:Name="__ReferenceID8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">540,368.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,123</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Tell the user that they selected the color 'Black' and provide the definition." DisplayName="Color: Black" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Color: Black" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_21" Text="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of the very darkest color owing to the absence of or complete absorption of light; the opposite of white.'&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message: Black" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;You selected the color &quot; + color + &quot;.&quot; + vbCrLf + vbCrLf + &quot;Definition: 'of the very darkest color owing to the absence of or complete absorption of light; the opposite of white.'&quot;]" />
+                </Sequence>
+              </FlowStep>
+            </FlowSwitch>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+  </Flowchart>
+</Activity>

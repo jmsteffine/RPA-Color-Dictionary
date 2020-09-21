@@ -1,0 +1,6 @@
+09/14/2020 10:40:20 => [Debug] Execution started for file: Main
+09/14/2020 10:40:21 => [Info] Color Dictionary execution started
+09/14/2020 10:40:27 => [Info] You selected the color Red.
+
+Definition: 'of a color at the end of the spectrum next to orange and opposite violet, as of blood, fire, or rubies.'
+09/14/2020 10:40:27 => [Info] Color Dictionary execution ended in: 00:00:05

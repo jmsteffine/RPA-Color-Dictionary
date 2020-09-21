@@ -1,0 +1,6 @@
+09/14/2020 10:41:45 => [Debug] Execution started for file: Main
+09/14/2020 10:41:46 => [Info] Color Dictionary execution started
+09/14/2020 10:41:50 => [Info] You selected the color White.
+
+Definition: 'of the color of milk or fresh snow, due to the reflection of most wavelengths of visible light; the opposite of black.'
+09/14/2020 10:41:50 => [Info] Color Dictionary execution ended in: 00:00:04
